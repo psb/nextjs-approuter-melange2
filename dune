@@ -1,0 +1,23 @@
+(melange.emit
+ (target nextjs)
+ (alias nextjs)
+ (module_systems es6)
+ (libraries app)
+ (runtime_deps
+  .eslintrc.json
+  .vercelignore
+  next-env.d.ts
+  next.config.js
+  package-lock.json
+  package.json
+  postcss.config.js
+  tailwind.config.ts
+  tsconfig.json
+  (source_tree public)))
+
+(dirs :standard \ node_modules)
+
+; (env
+;  (dev
+;   (flags
+;    (:standard -warn-error -69))))

@@ -1,0 +1,33 @@
+opam-version: "2.0"
+synopsis: "NextJS, AppRouter and ReasonReact"
+description: "NextJS, AppRouter and ReasonReact"
+maintainer: ["Paul Bacchus"]
+authors: ["Paul Bacchus"]
+license: "MIT"
+homepage: "https://github.com/psb/nextjs-approuter-melange2"
+bug-reports: "https://github.com/psb/nextjs-approuter-melange2/issues"
+depends: [
+  "ocaml" {>= "5.1.0"}
+  "reason" {>= "3.10.0"}
+  "dune" {>= "3.8"}
+  "melange" {>= "2.0.0"}
+  "reason-react-ppx"
+  "reason-react" {>= "0.13.0"}
+  "opam-check-npm-deps" {with-test} # todo: use with-dev-setup once opam 2.2 is out
+  "ocaml-lsp-server" {with-test} # todo: use with-dev-setup once opam 2.2 is out
+  "dot-merlin-reader" {with-test} # todo: use with-dev-setup once opam 2.2 is out
+  "odoc" {with-doc}
+  "ocamlformat" {>= "0.25.0"}
+  "atdgen"
+  "melange-fetch" {dev}
+  "melange-json" {dev}
+  "melange-webapi" {dev}
+  "melange-atdgen-codec-runtime" {dev}
+]
+pin-depends: [
+    ["melange-fetch.dev" "git+https://github.com/melange-community/melange-fetch.git#master"]
+    ["melange-json.dev" "git+https://github.com/melange-community/melange-json.git#main"]
+    ["melange-atdgen-codec-runtime.dev" "git+https://github.com/ahrefs/melange-atdgen-codec-runtime.git#master"]
+    ["melange-webapi.dev" "git+https://github.com/melange-community/melange-webapi.git#master"]
+]
+dev-repo: "git+https://github.com/psb/nextjs-approuter-melange2.git"

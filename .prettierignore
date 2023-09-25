@@ -1,0 +1,13 @@
+# Ignore all files.
+*.*
+# Unignore:
+!**/*.html
+!**/*.js
+!**/*.mjs
+!**/*.css
+!**/*.md
+!**/*.cjs
+!**/*.yml
+!**/*.ts
+!**/*.tsx
+!**/*.jsx
