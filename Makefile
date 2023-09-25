@@ -49,6 +49,24 @@ preview: ## Preview the built JS
 lint: ## JS lint
 	cd _build/default/nextjs && npm run lint
 
+.PHONY: vercel-build
+vercel-build: ## Build for vercel cli deployment
+	vercel build
+
+.PHONY: vercel-build-prod
+vercel-build-prod: ## Production build for vercel cli deployment
+	vercel build --prod
+
+.PHONY: deploy
+deploy: ## Deploy preview build to vercel.
+        ## Must be logged into vercel in terminal and must run 'make vercel*' first
+	vercel deploy
+
+.PHONY: deploy-prod
+deploy-prod: ## Deploy build to vercel.
+             ## Must be logged into vercel in terminal and must run 'make vercel*' first
+	vercel --prod
+
 .PHONY: clean
 clean: ## Clean build artifacts and other generated files
 	$(DUNE) clean
