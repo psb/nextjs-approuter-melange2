@@ -1,7 +1,7 @@
 (library
  (name app)
  (modes melange)
- (libraries reason-react)
+ (libraries reason-react bindings dogs jokes rick_and_morty)
  (melange.runtime_deps
   favicon.ico
   globals.css

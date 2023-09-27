@@ -2,8 +2,10 @@
  (target nextjs)
  (alias nextjs)
  (module_systems es6)
- (libraries app)
+ (libraries app components bindings api)
  (runtime_deps
+  (source_tree .next)
+  (source_tree public)
   .eslintrc.json
   .vercelignore
   next-env.d.ts
@@ -12,12 +14,11 @@
   package.json
   postcss.config.js
   tailwind.config.ts
-  tsconfig.json
-  (source_tree public)))
+  tsconfig.json))
 
 (dirs :standard \ node_modules)
 
-; (env
-;  (dev
-;   (flags
-;    (:standard -warn-error -69))))
+(env
+ (dev
+  (flags
+   (:standard -warn-error -69-32))))

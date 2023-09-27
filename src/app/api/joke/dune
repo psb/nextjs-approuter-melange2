@@ -1,0 +1,6 @@
+(library
+ (name joke_route)
+ (libraries melange-json melange-fetch bindings)
+ (modes melange)
+ (preprocess
+  (pps melange.ppx)))
