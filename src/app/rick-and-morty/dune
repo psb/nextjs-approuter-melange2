@@ -1,6 +1,8 @@
 (library
  (name rick_and_morty)
- (libraries reason-react melange-fetch melange-json)
+ (libraries reason-react melange-fetch melange-json melange-webapi bindings)
+ (melange.runtime_deps
+  (glob_files *.tsx))
  (modes melange)
  (preprocess
   (pps reason-react-ppx melange.ppx)))

@@ -8,3 +8,6 @@ type status = {status: int};
 type response;
 [@mel.module "next/server"] external response: response = "NextResponse";
 [@mel.send] external response_json: (response, message, status) => t = "json";
+
+external fetch: string => Js.Promise.t(response) = "fetch";
+[@mel.send] external json: response => Js.Json.t = "json";

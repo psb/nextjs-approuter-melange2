@@ -1,3 +1,13 @@
+; (subdir
+;  node_modules
+;  (subdir
+;   reason-promise/src/js
+;   (library
+;    (name promise)
+;    (modes melange)
+;    (preprocess
+;     (pps melange.ppx)))))
+
 (melange.emit
  (target nextjs)
  (alias nextjs)
@@ -16,7 +26,7 @@
   tailwind.config.ts
   tsconfig.json))
 
-(dirs :standard \ node_modules)
+; (dirs :standard \ node_modules)
 
 (env
  (dev
