@@ -1,12 +1,14 @@
 [@mel.module "next/image"] [@react.component]
 external make:
   (
-    ~className: string,
+    ~className: string=?,
     ~src: string,
     ~alt: string,
     ~width: int,
     ~height: int,
-    ~priority: bool
+    ~priority: bool=?,
+    ~placeholder: string=?,
+    ~blurDataURL: string=?
   ) =>
   React.element =
   "default";

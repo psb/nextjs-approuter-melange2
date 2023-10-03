@@ -1,11 +1,6 @@
 (library
- (name rick_and_morty)
- (libraries
-  reason-react
-  melange-fetch
-  melange-json
-  bindings
-  rick_and_morty_character_id)
+ (name rick_and_morty_character_id)
+ (libraries reason-react melange-fetch melange-json bindings promise)
  (melange.runtime_deps
   (glob_files *.tsx))
  (modes melange)

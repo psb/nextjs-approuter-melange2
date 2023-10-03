@@ -1,12 +1,12 @@
-; (subdir
-;  node_modules
-;  (subdir
-;   reason-promise/src/js
-;   (library
-;    (name promise)
-;    (modes melange)
-;    (preprocess
-;     (pps melange.ppx)))))
+(subdir
+ node_modules
+ (subdir
+  reason-promise/src/js
+  (library
+   (name promise)
+   (modes melange)
+   (preprocess
+    (pps melange.ppx)))))
 
 (melange.emit
  (target nextjs)
@@ -31,4 +31,4 @@
 (env
  (dev
   (flags
-   (:standard -warn-error -69-32))))
+   (:standard -warn-error -69-32-26))))

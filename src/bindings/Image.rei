@@ -1,11 +1,13 @@
 [@react.component]
 let make:
   (
-    ~className: string,
+    ~className: string=?,
     ~src: string,
     ~alt: string,
     ~width: int,
     ~height: int,
-    ~priority: bool
+    ~priority: bool=?,
+    ~placeholder: string=?,
+    ~blurDataURL: string=?
   ) =>
   React.element;
