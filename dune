@@ -9,10 +9,10 @@
     (pps melange.ppx)))))
 
 (melange.emit
- (target src)
+ (target app)
  (alias nextjs)
  (module_systems es6)
- (libraries reason_app bindings api)
+ (libraries app bindings api)
  (promote (until-clean)))
 
 ; (dirs :standard \ node_modules)
