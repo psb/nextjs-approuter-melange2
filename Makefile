@@ -35,19 +35,19 @@ build_verbose: ## Build the project
 
 .PHONY: dev
 dev: ## Serve the application with a local HTTP server
-	cd _build/default/nextjs && npm run dev
+	npm run dev
 
 .PHONY: bundle
 bundle: ## Bundle the JS
-	cd _build/default/nextjs && npm run build
+	npm run build
 
 .PHONY: preview
 preview: ## Preview the built JS
-	cd _build/default/nextjs && npm run start
+	npm run start
 
 .PHONY: lint
 lint: ## JS lint
-	cd _build/default/nextjs && npm run lint
+	npm run lint
 
 .PHONY: vercel-build
 vercel-build: ## Build for vercel cli deployment

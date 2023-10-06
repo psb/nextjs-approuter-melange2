@@ -9,22 +9,11 @@
     (pps melange.ppx)))))
 
 (melange.emit
- (target nextjs)
+ (target src)
  (alias nextjs)
  (module_systems es6)
- (libraries app components bindings api)
- (runtime_deps
-  (source_tree .next)
-  (source_tree public)
-  .eslintrc.json
-  .vercelignore
-  next-env.d.ts
-  next.config.js
-  package-lock.json
-  package.json
-  postcss.config.js
-  tailwind.config.ts
-  tsconfig.json))
+ (libraries reason_app bindings api)
+ (promote (until-clean)))
 
 ; (dirs :standard \ node_modules)
 

@@ -1,5 +1,5 @@
 (library
- (name app)
+ (name reason_app)
  (modes melange)
  (libraries reason-react bindings dogs jokes rick_and_morty)
  (melange.runtime_deps
