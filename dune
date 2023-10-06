@@ -9,11 +9,10 @@
     (pps melange.ppx)))))
 
 (melange.emit
- (target app)
+ (target output)
  (alias nextjs)
  (module_systems es6)
- (libraries app bindings api)
- (promote (until-clean)))
+ (libraries app bindings api))
 
 ; (dirs :standard \ node_modules)
 
@@ -21,3 +20,15 @@
  (dev
   (flags
    (:standard -warn-error -69-32-26))))
+
+(rule
+ (alias promote-app)
+ (mode
+  (promote (until-clean)))
+ (deps
+  (alias_rec nextjs))
+ (targets
+  (dir src))
+ (action
+  (bash
+   "mkdir src && cp -r output/src_app src/app && cp -r output/bindings src && cp -r output/node_modules src")))

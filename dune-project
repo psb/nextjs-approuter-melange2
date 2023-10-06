@@ -2,6 +2,8 @@
 
 (using melange 0.1)
 
+(using directory-targets 0.1)
+
 (name nextjs-approuter-melange2)
 
 (license "MIT")

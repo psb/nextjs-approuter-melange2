@@ -27,11 +27,11 @@ install: ## Install development dependencies
 
 .PHONY: build
 build: ## Build the project
-	$(DUNE) build @nextjs
+	$(DUNE) build @nextjs @promote-app
 
 .PHONY: build_verbose
 build_verbose: ## Build the project
-	$(DUNE) build --verbose @nextjs
+	$(DUNE) build --verbose @nextjs @promote-app
 
 .PHONY: dev
 dev: ## Serve the application with a local HTTP server
@@ -81,4 +81,4 @@ format-check: ## Checks if format is correct
 
 .PHONY: watch
 watch: ## Watch for the filesystem and rebuild on every change
-	$(DUNE) build --watch @nextjs
+	$(DUNE) build --watch @nextjs @promote-app
