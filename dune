@@ -31,4 +31,4 @@
   (dir src))
  (action
   (bash
-   "mkdir src && cp -r output/src_app src/app && cp -r output/bindings src && cp -r output/node_modules src")))
+   "mkdir src && cp -r output/reason_app src/app && cp -r output/reason_bindings src && cp -r output/node_modules src")))
