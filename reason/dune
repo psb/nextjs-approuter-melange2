@@ -1,0 +1,24 @@
+; (library
+;  (name app)
+;  (modes melange)
+;  (libraries reason-react bindings dogs jokes rick_and_morty)
+;  (melange.runtime_deps
+;   favicon.ico
+;   globals.css
+;   (glob_files *.tsx))
+;  (preprocess
+;   (pps reason-react-ppx melange.ppx)))
+
+(melange.emit
+ (target output)
+ (alias nextjs)
+ (module_systems es6)
+ (libraries api bindings dogs jokes rick_and_morty)
+ (runtime_deps
+  favicon.ico
+  globals.css
+  (glob_files *.tsx))
+ (preprocess
+  (pps reason-react-ppx melange.ppx))
+ ; (promote (until-clean))
+ )

@@ -8,11 +8,11 @@
    (preprocess
     (pps melange.ppx)))))
 
-(melange.emit
- (target output)
- (alias nextjs)
- (module_systems es6)
- (libraries app bindings api))
+; (melange.emit
+;  (target output)
+;  (alias nextjs)
+;  (module_systems es6)
+;  (libraries app bindings api))
 
 ; (dirs :standard \ node_modules)
 
@@ -28,7 +28,6 @@
  (deps
   (alias_rec nextjs))
  (targets
-  (dir src))
+  (dir app))
  (action
-  (bash
-   "mkdir src && cp -r output/src_app src/app && cp -r output/bindings src && cp -r output/node_modules src")))
+  (bash "cp -r reason/output/reason app")))
