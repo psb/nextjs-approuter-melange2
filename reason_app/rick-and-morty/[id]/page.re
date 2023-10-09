@@ -90,6 +90,7 @@ let default = (~params: params) => {
       {switch (character) {
        | Some(c) => characterComponent(c)
        | None => React.string("Loading")
+       //  | _ => raise(Not_found) // For testing ErrorBoundary
        }}
     </div>
     <Bindings.Link href="/rick-and-morty" className="underline">
