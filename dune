@@ -14,8 +14,6 @@
  (module_systems es6)
  (libraries app bindings api))
 
-; (dirs :standard \ node_modules)
-
 (env
  (dev
   (flags

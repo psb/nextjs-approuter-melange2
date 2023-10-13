@@ -8,11 +8,3 @@
   (glob_files *.tsx))
  (preprocess
   (pps reason-react-ppx melange.ppx)))
-
-; (melange.emit
-;  (target output)
-;  (alias nextjs)
-;  (module_systems es6)
-;  (libraries app bindings api)
-;  ; (promote (until-clean))
-;  )
