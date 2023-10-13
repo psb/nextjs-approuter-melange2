@@ -28,7 +28,7 @@ This project is deployed at: https://nextjs-approuter-melange2.vercel.app/
 
 The main Reason and ReasonReact code is in the `reason_app` folder, which is equivalent to `src/app` in a NextJS project. Reason bindings to NextJS components are in the `reason_bindings` folder.
 
-To create the NextJS App Router folder layout the Reason code is built/compiled to the `_build` directory and then "promoted" back out into the root directory. See the dune files for more information.
+To create the NextJS App Router folder layout the Reason code is built/compiled to the `_build` directory and then promoted (i.e., copied) back out into the root directory. See the dune files for more information.
 
 Once the output JS is promoted then the NextJS dev tooling takes over and serves the app.
 
