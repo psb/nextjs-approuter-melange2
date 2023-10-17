@@ -2,6 +2,8 @@
 
 This is a basic project that shows you how you can mix [Next.js](https://nextjs.org/) with [Reason](https://reasonml.github.io/en), [Reason React](https://reasonml.github.io/reason-react/en), and [Vercel](https://vercel.com/) serverless functions. The project uses [Melange 2](https://melange.re/v2.0.0/) to transform the Reason code to JS.
 
+[See this blog post for more information](https://dev.to/psb/reason-and-react-meta-frameworks-d7n)
+
 This project is deployed at: https://nextjs-approuter-melange2.vercel.app/
 
 ## Project Structure
